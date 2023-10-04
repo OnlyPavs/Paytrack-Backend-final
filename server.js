@@ -19,7 +19,7 @@ require('./config/passport.local')(passport);
 
 // DB Config
 mongoose
-	.connect(mongodb+srv://spkpower26:Spkpower%4026@cluster0.tkwlljr.mongodb.net/?retryWrites=true&w=majority
+	.connect(process.env.mongoURI
 , {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
@@ -27,7 +27,7 @@ mongoose
 	})
 	.then(() => console.log('MongoDB database connection established successfully'))
 	.catch((err) => {
-		console.log(mongodb+srv://spkpower26:Spkpower%4026@cluster0.tkwlljr.mongodb.net/?retryWrites=true&w=majority
+		console.log(process.env.mongoURI
 );
 		console.log(err)
 	});
